@@ -1,129 +1,179 @@
-<!--
+---
+marp: true
+author: Man Hin Tsang
+header: ''
 theme: gaia
-class:
- - invert
-headingDivider: 2 
+math: katex
 paginate: true
--->
+style: |
+    * {
+        font-size: 25px !important;
+        color: rgba(255, 255, 255, 0.9);
+        letter-spacing: 0em; 
+        box-sizing: border-box;
+    }
+    :root {
+        background-image: url("./img/background.jpg");
+        background-size: contain;
+        padding: 3rem;
+    }
+    h1 {
+        font-size: 1.3rem !important;
+    }
+    h2 {
+        font-size: 1.2rem !important;
+    } 
+    h3 {
+        font-size: 1.1rem !important;
+    }
+    h4 {
+        font-size: 1.3rem !important;
+    }
+    h5 {
+        font-size: 1.2rem !important;
+    } 
+    h6 {
+        font-size: 1.1rem !important;
+    }
+    h1, h2, h3 {
+        text-align: center;
+        letter-spacing: 0.01rem;
+    }
+    h4, h5, h6 {
+        letter-spacing: 0.01rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+    section.info {
+        text-align: right;
+    }
+    section.small > p, section.small > ol, section.small > ul{
+        font-size: 0.9rem;
+    }
+    section::after {
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 100;
+        font-size: 0.4em;
+        content: 'Page ' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+    }
 
-<!--
-_class:
- - lead
- - invert
--->
+---
 
-# Deploy Marp to GitHub Pages
+<p align="center">lunch meeting ~ 1hr.  12:05 - 1:00 PM</p>
 
-Presentations to Webpages: Instantly!
+### Presentation
+# Possible Existence of Parallel Oriented Molecular Cloud in Gould Belt in Numerical Aspect
 
-## What?
+<!-- _class: info --> 
 
-[Marp](https://marp.app/) lets you create HTML slides from markdown (like this!).
-
-This presentation is both a [website](https://alexsci.com/marp-to-pages) and a [README.md](https://github.com/ralexander-phi/marp-to-pages/blob/main/README.md).
-
-## Why?
-
-Treat your presentation the same way you treat code.
-
-- Use git to track changes
-- Pull requests to collaborate
-- Deploy automatically
-- See a problem? Open an issue!
-
-## Setup
-
-Want to create your own?
-
-First, create a new repo [from the template repo](https://github.com/ralexander-phi/marp-to-pages).
-
-![](img/use-template.png)
-
-## Configure GitHub Pages
-
-Open your new repo and [setup publishing](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#choosing-a-publishing-source).
-
-You'll typically use `gh-pages` as the deploy branch.
-
-## Review Build
-
-Click on Actions tab and see if the build succeeded (it may take some time).
-
-![](img/click-actions.png)
-
-You should now see the generated files in the `gh-pages` branch.
-
-## View webpage
-
-Open your deployed webpage to see the content.
-
-Out of the box you should see `README.md` as `/index.html` and `/README.pdf`. Slides under `docs/` are also converted.
-
-## Running locally
-
-Locally you'll run commands like:
-
-```
-$ marp README.md -o build/README.pdf
-```
-
-or
-
-```
-$ npx @marp-team/marp-cli@latest README.md -o build/README.pdf
-```
-
-## As a workflow step
-
-The workflow runs an equivalent step:
-
-```
-- name: Marp Build (README.pdf)
-  uses: docker://marpteam/marp-cli:v1.7.0
-  with:
-    args: README.md -o build/README.pdf
-  env:
-    MARP_USER: root:root
-```
-
-Note the `args` match the previous slide.
-
-## Customizing the build
-
-Anything in the `build/` folder will be deployed to GitHub Pages.
-
-You can copy extra files or run further processing steps using other tools.
-
-## Learn more about Marp
-
-This is a good time to learn more about Marp. Here's some resources:
-
-- [CommonMark](https://commonmark.org/)
-- [Cheat Sheet](https://commonmark.org/help/)
-- [Themes](https://github.com/marp-team/marp-core/tree/master/themes)
-- [CSS Themes](https://marpit.marp.app/theme-css)
-- [Directives](https://marpit.marp.app/directives)
-- [VS Code plugin](https://marketplace.visualstudio.com/items?itemName=marp-team.marp-vscode)
-
-## Example Sites
-
-Known sites using this action are:
-
-- [University of Illinois at Urbana-Champaign's CS 199 Even More Practice](https://cs199emp.netlify.app/) [(code)](https://github.com/harsh183/emp-125)
-- [Exploring agent based models](https://roiarthurb.github.io/Talk-UMMISCO_06-07-2020/) [(code)](https://github.com/RoiArthurB/Talk-UMMISCO_06-07-2020)
-
-Send a [pull request](https://github.com/ralexander-phi/marp-to-pages) to get your site added.
-
-## Publish your slides
-
-When you are ready to share your presentation, commit or merge to `main` and your content on GitHub Pages will automatically update.
-
-# 🎉
-<!--
-_class:
- - lead
- - invert
--->
-### Hooray!
+<small>Tsang Man Hin
+21 <sup>June</sup> July, 2022</small>
 
 
+---
+
+1. Why SFE so low? candidates are b-field & turbulent.
+
+2. Disk formation & IMF
+
+---
+
+#### Background 
+ <!-- Too Basic -->
+- What is ISM. & Molecular cloud (big picture).
+
+- Base to build the research.
+
+- Elongated properties of MC. (Examples, from PLANC | QL) (-> idea to study the long-axis orientation.)
+
+- Turbulent & Magnetic field (Examples, shows some figures).
+
+- linewidth observed is much wider then thermal emission (~10K), preventing from cloud from free-falling.
+
+- Gas pressure is some how isotropic, but not for the magnetic field pressure. 
+
+- B-field (ordered) & elongated -> something to do to the SFE. (Li 2017)
+
+
+---
+
+#### Background 
+- Orientation of molecular clouds.
+
+- Probing the Magnetic field.
+
+    1. Zeeman measurement (LOS field strength)
+
+    2. Polarmetary (Orientations).
+
+- Defination of Cloud-field alignment.
+
+---
+
+#### Background 
+
+<!-- Logic flow -->
+
+- Li 2013 Discovery of bimodal cloud-field alignemnt.
+
+- Seifried 2015 MHD study of Cloud orientation.
+
+- Law 2020 MCF slope study of mass accumulation
+
+- Li 2017 study of star-formation effeciency.
+
+--- 
+
+#### Project details.
+
+1. Simulation setup
+
+2. Projections
+
+3. MCF & SFE.
+
+4. Statistical test.
+
+5. Result.
+
+---
+
+#### Discussion 
+
+Why Solar can't see the Li17 trends.
+
+- Density threshold.
+
+    (Go through this paper)
+    - Solar use the density threshold above the critical density $A_V = 8$, a range that cloud mass is linearly correlated with the star-formation rate.
+
+    - Li 2017 analyzed using cloud mass above $A_V= 2$, not only focusing on the high density region.
+
+
+--- 
+
+Collisional Coefficient. (WG Appendix)
+Drag force term.
+
+WG-tests with realistic collisional coefficient (inconsistence result)
+
+Same result if repeating Balsara's result.
+
+Ask's ZY opinion.
+
+Draine 1986.
+
+
+A numerical scheme and benchmark tests for non-isothermal two-fluid
+ambipolar diffusion
+David A. Tilley
+, Dinshaw S. Balsara, Chad Meyer
+
+
+New Astronomy 17 (2012) 368–376
