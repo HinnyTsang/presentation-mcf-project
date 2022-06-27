@@ -6,9 +6,12 @@ theme: gaia
 math: katex
 paginate: true
 style: |
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     * {
+        font-family: 'Noto Sans', sans-serif;
         font-size: 25px !important;
         color: rgba(255, 255, 255, 0.9);
+        font-weight: 100;
         letter-spacing: 0em; 
         box-sizing: border-box;
     }
@@ -16,6 +19,7 @@ style: |
         background-image: url("../img/background.jpg");
         background-size: contain;
         padding: 3rem;
+        cursor: url("../img/star.svg"), auto;
     }
     h1 {
         font-size: 1.3rem !important;
@@ -42,39 +46,76 @@ style: |
     h4, h5, h6 {
         letter-spacing: 0.01rem;
     }
+    small {
+        font-size: 0.6rem !important;
+    }
+    sup {
+        font-size: 0.9em !important;
+    }
     p {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
     a {
         text-decoration: none;
         font-size: 1rem;
         color: rgba(255, 255, 255, 0.7);
     }
-    section.info {
-        text-align: right;
+    h1, h2, h3, h4, h5, h6, small, sup, p, a {
+        transition-duration: 200ms;
     }
-    section.small > p, section.small > ol, section.small > ul{
-        font-size: 0.9rem;
+    h1:hover, h2:hover, h3:hover,
+    h4:hover, h5:hover, h6:hover,
+    sup:hover, p:hover, li:hover,
+    small:hover {
+        color: rgba(255, 255, 255, 1);
+        text-shadow: 0 0 rgba(255, 255, 255, 1);
     }
-    section::after {
-        color: rgba(255, 255, 255, 0.7);
-        font-weight: 100;
-        font-size: 0.4em;
+    .row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .center-page {
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    section::after { 
+        color: rgba(255, 255, 255, 0.8); 
+        font-weight: 100; 
+        font-family: 'Noto Sans', sans-serif;
+        text-shadow: 0 0 rgba(0, 0, 0, 1);
+        font-size: 0.4em; 
         content: 'Page ' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
     }
-
+    section {
+        cursor: crosshair;
+    }
+    .test {
+        width: 20px;
+        height: 20px;
+        background: red;
+    }
 ---
 
-<p align="center">lunch meeting ~ 1hr.  12:05 - 1:00 PM</p>
+<div class="center-page">
+    <h3>Presentation</h3>
+    <h1>Possible Existence of Parallel Oriented Molecular Cloud in Gould Belt in Numerical Aspect</h1>
+    <br><br>
+    <div class="row">
+        <small>Tsang Man Hin</small>
+        <small>21 <sup>th</sup> July, 2022</small>
+    </div>
+    <div class="test">
+    </div>
+</div>
 
-### Presentation
-# Possible Existence of Parallel Oriented Molecular Cloud in Gould Belt in Numerical Aspect
 
-<!-- _class: info --> 
 
-<small>Tsang Man Hin
-21 <sup>June</sup> July, 2022</small>
-
+---
 
 ---
 
@@ -99,6 +140,7 @@ style: |
 - Gas pressure is some how isotropic, but not for the magnetic field pressure. 
 
 - B-field (ordered) & elongated -> something to do to the SFE. (Li 2017)
+
 
 
 ---
