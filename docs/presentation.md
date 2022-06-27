@@ -13,7 +13,7 @@ style: |
         box-sizing: border-box;
     }
     :root {
-        background-image: url("https://github.com/HinnyTsang/presentation-mcf-project/blob/main/img/background.jpg");
+        background-image: url(https://github.com/HinnyTsang/presentation-mcf-project/blob/main/img/background.jpg);
         background-size: contain;
         padding: 3rem;
     }
