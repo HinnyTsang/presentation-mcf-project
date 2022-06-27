@@ -9,11 +9,12 @@ style: |
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     * {
         font-family: 'Noto Sans', sans-serif;
-        font-size: 25px !important;
         color: rgba(255, 255, 255, 0.9);
         font-weight: 100;
         letter-spacing: 0em; 
-        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box !important;
     }
     :root {
         background-image: url("../img/background.jpg");
@@ -61,6 +62,8 @@ style: |
         color: rgba(255, 255, 255, 0.7);
     }
     h1, h2, h3, h4, h5, h6, small, sup, p, a {
+        position: relative;
+        display: inline-block;
         transition-duration: 200ms;
     }
     h1:hover, h2:hover, h3:hover,
@@ -69,6 +72,21 @@ style: |
     small:hover {
         color: rgba(255, 255, 255, 1);
         text-shadow: 0 0 rgba(255, 255, 255, 1);
+    }
+    h1::before, h2::before, h3::before,
+    h4::before, h5::before, h6::before, p::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '\00a0';
+        width: 0rem;
+        height: 0.1rem;
+        background-color: rgba(255,255,255,0.5);
+        transition-duration: 500ms;
+    }
+    h1:hover::before, h2:hover::before, h3:hover::before,
+    h4:hover::before, h5:hover::before, h6:hover::before, p:hover::before  {
+        width: 100%;
     }
     .row {
         width: 100%;
@@ -125,8 +143,10 @@ style: |
 
 ---
 
-#### Background 
+<h4>Background</h4> 
+
  <!-- Too Basic -->
+
 - What is ISM. & Molecular cloud (big picture).
 
 - Base to build the research.
