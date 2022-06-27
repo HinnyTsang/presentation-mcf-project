@@ -13,7 +13,7 @@ style: |
         box-sizing: border-box;
     }
     :root {
-        background-image: url("./img/background.jpg");
+        background-image: url("../img/background.jpg");
         background-size: contain;
         padding: 3rem;
     }
