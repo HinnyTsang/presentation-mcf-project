@@ -14,16 +14,17 @@ style: |
         font-weight: 100;
         letter-spacing: 0em; 
         padding: 0;
-        margin: 0;
+        margin: 0 !important;
         box-sizing: border-box !important;
     }
     :root {
         background-image: url("../img/background.jpg");
         background-size: contain;
         padding: 3rem;
-        cursor: url("../img/star.svg") 20 20,
-                url("../img/star.svg") 20 20,
+        cursor: url("../img/star.svg") 25 25,
+                url("../img/star.svg") 25 25,
                 move !important;
+        z-index: -9999;
     }
     header {
         font-size: 0.5rem;
@@ -98,7 +99,7 @@ style: |
         text-shadow: 0 0 rgba(255, 255, 255, 1);
     }
     h1::before, h2::before, h3::before,
-    h4::before, h5::before, h6::before, p::before {
+    h4::before, h5::before, h6::before, p::before, label::before  {
         position: absolute;
         top: 0;
         left: 0;
@@ -110,12 +111,12 @@ style: |
         transition-duration: 500ms;
     }
     h1:hover::before, h2:hover::before, h3:hover::before,
-    h4:hover::before, h5:hover::before, h6:hover::before, p:hover::before  {
+    h4:hover::before, h5:hover::before, h6:hover::before, p:hover::before, label:hover::before  {
         width: 100%;
         transform: translateX(2000px);
     }
     h1::after, h2::after, h3::after,
-    h4::after, h5::after, h6::after, p::after {
+    h4::after, h5::after, h6::after, p::after, label:after {
         position: absolute;
         bottom: 0;
         left: 2000px;
@@ -127,7 +128,7 @@ style: |
         transition-duration: 500ms;
     }
     h1:hover::after, h2:hover::after, h3:hover::after,
-    h4:hover::after, h5:hover::after, h6:hover::after, p:hover::after  {
+    h4:hover::after, h5:hover::after, h6:hover::after, p:hover::after, label:hover::after  {
         width: 100%;
         left: 0;
     }
@@ -135,7 +136,12 @@ style: |
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
+    }
+    .row-sub {
+        width: 40%;
+        display: flex;
+        justify-content: space-between;
     }
     .center-page {
         padding-top: 100px;
@@ -155,6 +161,18 @@ style: |
     left {
         justify-self: start;
     }
+    #img-center {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: -1;
+    }
     #canvas {
         position: absolute;
         display: flex;
@@ -164,12 +182,14 @@ style: |
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: -999;
     }
     #canvas .circle {
         position: absolute;
         opacity: 0;
         width: 10px;
         height: 10px;
+        z-index: -999;
     }
     .star {
         position: relative;
@@ -238,7 +258,37 @@ style: |
         animation: radial 5000ms ease-in 2000ms infinite;
         animation-fill-mode: forwards;
     }
-
+    figcaption {
+        font-size: 0.7rem;
+        text-align: right !important;
+    }
+    .list-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    .list-item input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+    }
+    .list-bullet {
+        height: 0.3rem;
+        width: 0.3rem;
+        border-radius: 100rem;
+        background-color: white;
+    }
+    .list-item label {
+        opacity: 0;
+        transform: translate(1rem, 0);
+        transition: 500ms;
+    }
+    input:checked + label {
+        transform: translate(0rem, 0);
+        opacity: 1;
+    }
 ---
 
 <div id="canvas">
@@ -256,10 +306,14 @@ style: |
     <h1>Possible Existence of Parallel Oriented Molecular Cloud in Gould Belt in Numerical Aspect</h1>
     <br>
     <div class="row">
-        <small class='left'>MPhil student in Physics</small>
-        <small>Tsang Man Hin</small>
-        <small class='left'>Supervisor</small>
-        <small>Prof. Li, Hua Bai</small>
+        <div class="row-sub">
+            <small class='left'>MPhil student in Physics</small>
+            <small>Tsang Man Hin</small>
+        </div>
+        <div class="row-sub">
+            <small class='left'>Supervisor</small>
+            <small>Prof. Li, Hua Bai</small>
+        </div>
         <small>30 June 2022</small>
     </div>
 </div>
@@ -276,14 +330,108 @@ style: |
     <div class="circle" id="c7"><div class="star"></div></div>
 </div>
 
+<h4>Stars</h4>
 
-1. Why SFE so low? candidates are b-field & turbulent.
+<div id="img-center">
+    <img height="60%" src="../img/sun.png"/>
+    <small>Image adoped from Helioviewer.org</small>
+</div>
 
-2. Disk formation & IMF
+
+<!--
+    - funcamental building blocks of the astronomical objects.
+    - ages
+    - distributions & composition trace the history of the galaxy.
+    - HR diagram -> ages of clusters.
+    - Giant fusion reactor - pp chain, CNO cycles, 
+    - 
+-->
+
+---
+
+<div id="canvas">
+    <div class="circle" id="c1"><div class="star"></div></div>
+    <div class="circle" id="c2"><div class="star"></div></div>
+    <div class="circle" id="c3"><div class="star"></div></div>
+    <div class="circle" id="c4"><div class="star"></div></div>
+    <div class="circle" id="c5"><div class="star"></div></div>
+    <div class="circle" id="c6"><div class="star"></div></div>
+    <div class="circle" id="c7"><div class="star"></div></div>
+</div>
+
+<h4>Inter staller Medium</h4>
+
+<div id="img-center">
+    <img height="60%" src="../img/ism.jpg"/>
+</div>
+
+<!-- 
+    - Gas filling the space
+    - Hydrogen, atoms molecules or ions.
+    - Dust.
+    - Ions -> H II emission, (n = 3 -> 2: red) (n = 4 -> 2: blue).
+    - Atoms -> H I region (wavelength = 21 cm) (spin flip)
+    - Molecules -> didn't emit -> observe CO emission line (2.6 mm).
+ -->
+
+
+---
+
+<div id="canvas">
+    <div class="circle" id="c1"><div class="star"></div></div>
+    <div class="circle" id="c2"><div class="star"></div></div>
+    <div class="circle" id="c3"><div class="star"></div></div>
+    <div class="circle" id="c4"><div class="star"></div></div>
+    <div class="circle" id="c5"><div class="star"></div></div>
+    <div class="circle" id="c6"><div class="star"></div></div>
+    <div class="circle" id="c7"><div class="star"></div></div>
+</div>
+
+<h4>Molecular Cloud</h4>
+
+<div id="img-center">
+    <img height="60%" src="../img/musca.png"/>
+    <figcaption>Herschel 250 µm dust emission map of Musca (A. Tritsis & K. Tassis, 2018)</figcaption>
+</div>
+
+<!-- 
+    - Dense and cold gas, composite of molecules.
+    - Hydrogen, atoms molecules or ions.
+    - Dust.
+    - Ions -> H II emission, (n = 3 -> 2: red) (n = 4 -> 2: blue).
+    - Atoms -> H I region (wavelength = 21 cm) (spin flip)
+    - Molecules -> didn't emit -> observe CO emission line (2.6 mm).
+ -->
+<br>
+<br>
+<div class="list-item">
+    <span class="list-bullet"></span>
+    <input type="checkbox" id="cb2" />
+    <label for="cb2">Fuck you twice.</label>
+</div>
+<div class="list-item">
+    <span class="list-bullet"></span>
+    <input type="checkbox" id="cb1" />
+    <label for="cb1">Fuck you twice.</label>
+</div>
 
 ---
 
 <h4>Background</h4> 
+
+<br>
+<br>
+<div class="list-item">
+    <span class="list-bullet"></span>
+    <input type="checkbox" id="cb3" />
+    <label for="cb3">Fuck you twice.</label>
+</div>
+<div class="list-item">
+    <span class="list-bullet"></span>
+    <input type="checkbox" id="cb4" />
+    <label for="cb4">Fuck you twice.</label>
+</div>
+
 
  <!-- Too Basic -->
 
@@ -395,3 +543,8 @@ Observe the MCF slope and SFE from the simulated observation.
 
 Comparing this with the observation and judge the most propably ratio between para and perp
 
+---
+
+#### References
+
+A. Tritsis, K. Tassis, Magnetic seismology of interstellar gas clouds: Unveiling a hidden dimension. Science 360, 635-638 (2018)
