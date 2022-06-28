@@ -1,7 +1,8 @@
 ---
 marp: true
 author: Man Hin Tsang
-header: ''
+header: '![width:70px height: 70px](../img//cuhk-logo.png) 香港中文大學<br>The Chinese University of Hong Kong'
+footer: '30 June, 2022 - Hinny Tsang - <a href="http://sfg.phy.cuhk.edu.hk/group_page/">Star Formation Group @ CUHK</a>'
 theme: gaia
 math: katex
 paginate: true
@@ -9,7 +10,7 @@ style: |
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     * {
         font-family: 'Noto Sans', sans-serif;
-        color: rgba(255, 255, 255, 0.9);
+        color: rgba(255, 255, 255, 0.9) !important;
         font-weight: 100;
         letter-spacing: 0em; 
         padding: 0;
@@ -20,7 +21,30 @@ style: |
         background-image: url("../img/background.jpg");
         background-size: contain;
         padding: 3rem;
-        cursor: url("../img/star.svg"), auto;
+        cursor: url("../img/star.svg") 20 20,
+                url("../img/star.svg") 20 20,
+                move !important;
+    }
+    header {
+        font-size: 0.5rem;
+        padding-left: 1.4rem;
+        display:flex;
+        height: 3rem;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        letter-spacing: 1px;
+        line-height: 1;
+    }
+    footer {
+        padding-left: 1.4rem;
+        font-size: 0.4rem;
+    }
+    footer > a{
+        font-size: 0.4rem;
+    }
+    header > img{
+        filter: drop-shadow(0px 0px 0.01px #fff);
     }
     h1 {
         font-size: 1.3rem !important;
@@ -80,13 +104,32 @@ style: |
         left: 0;
         content: '\00a0';
         width: 0rem;
-        height: 0.1rem;
-        background-color: rgba(255,255,255,0.5);
+        height: 0.05rem;
+        border-radius: 1000px;
+        background-color: rgba(255,255,255,0.8);
         transition-duration: 500ms;
     }
     h1:hover::before, h2:hover::before, h3:hover::before,
     h4:hover::before, h5:hover::before, h6:hover::before, p:hover::before  {
         width: 100%;
+        transform: translateX(2000px);
+    }
+    h1::after, h2::after, h3::after,
+    h4::after, h5::after, h6::after, p::after {
+        position: absolute;
+        bottom: 0;
+        left: 2000px;
+        content: '\00a0';
+        width: 0rem;
+        height: 0.05rem;
+        border-radius: 1000px;
+        background-color: rgba(255,255,255,0.9);
+        transition-duration: 500ms;
+    }
+    h1:hover::after, h2:hover::after, h3:hover::after,
+    h4:hover::after, h5:hover::after, h6:hover::after, p:hover::after  {
+        width: 100%;
+        left: 0;
     }
     .row {
         width: 100%;
@@ -107,35 +150,132 @@ style: |
         font-family: 'Noto Sans', sans-serif;
         text-shadow: 0 0 rgba(0, 0, 0, 1);
         font-size: 0.4em; 
-        content: 'Page ' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+        content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
     }
-    section {
-        cursor: crosshair;
+    left {
+        justify-self: start;
     }
-    .test {
-        width: 20px;
-        height: 20px;
-        background: red;
+    #canvas {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
+    #canvas .circle {
+        position: absolute;
+        opacity: 0;
+        width: 10px;
+        height: 10px;
+    }
+    .star {
+        position: relative;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 1);
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 100px;
+    }
+    @keyframes radial {
+        0% {
+            width: 0px;
+            height: 0px;
+            opacity: 0;
+        }
+        20% {
+            opacity: 1;
+            width: 2000px;
+            height: 2000px;
+        }
+        100% {
+            opacity: 1;
+            width: 2000px;
+            height: 2000px;
+        }
+    }
+    #c1{
+        transform: rotate(0deg) !important;
+        animation: radial 5000ms ease-in 100ms infinite;
+        animation-fill-mode: forwards;
+    }
+    #c2{
+        transform: rotate(40deg) !important;
+        animation-delay: 2s;
+        animation: radial 5000ms ease-in 500ms infinite;
+        animation-fill-mode: forwards;
+    }
+    #c3{
+        transform: rotate(70deg) !important;
+        animation-delay: 2s;
+        animation: radial 5000ms ease-in 1500ms infinite;
+        animation-fill-mode: forwards;
+    }
+    #c4{
+        transform: rotate(200deg) !important;
+        animation-delay: 2s;
+        animation: radial 5000ms ease-in 7500ms infinite;
+        animation-fill-mode: forwards;
+    }
+    #c5{
+        transform: rotate(350deg) !important;
+        animation-delay: 2s;
+        animation: radial 5000ms ease-in 1900ms infinite;
+        animation-fill-mode: forwards;
+    }
+    #c6{
+        transform: rotate(270deg) !important;
+        animation-delay: 2s;
+        animation: radial 5000ms ease-in 3000ms infinite;
+        animation-fill-mode: forwards;
+    }
+    #c7{
+        transform: rotate(140deg) !important;
+        animation-delay: 2s;
+        animation: radial 5000ms ease-in 2000ms infinite;
+        animation-fill-mode: forwards;
+    }
+
 ---
 
+<div id="canvas">
+    <div class="circle" id="c1"><div class="star"></div></div>
+    <div class="circle" id="c2"><div class="star"></div></div>
+    <div class="circle" id="c3"><div class="star"></div></div>
+    <div class="circle" id="c4"><div class="star"></div></div>
+    <div class="circle" id="c5"><div class="star"></div></div>
+    <div class="circle" id="c6"><div class="star"></div></div>
+    <div class="circle" id="c7"><div class="star"></div></div>
+</div>
+
 <div class="center-page">
-    <h3>Presentation</h3>
+    <h3>Project Presentation</h3>
     <h1>Possible Existence of Parallel Oriented Molecular Cloud in Gould Belt in Numerical Aspect</h1>
-    <br><br>
+    <br>
     <div class="row">
+        <small class='left'>MPhil student in Physics</small>
         <small>Tsang Man Hin</small>
-        <small>21 <sup>th</sup> July, 2022</small>
-    </div>
-    <div class="test">
+        <small class='left'>Supervisor</small>
+        <small>Prof. Li, Hua Bai</small>
+        <small>30 June 2022</small>
     </div>
 </div>
 
-
-
 ---
 
----
+<div id="canvas">
+    <div class="circle" id="c1"><div class="star"></div></div>
+    <div class="circle" id="c2"><div class="star"></div></div>
+    <div class="circle" id="c3"><div class="star"></div></div>
+    <div class="circle" id="c4"><div class="star"></div></div>
+    <div class="circle" id="c5"><div class="star"></div></div>
+    <div class="circle" id="c6"><div class="star"></div></div>
+    <div class="circle" id="c7"><div class="star"></div></div>
+</div>
+
 
 1. Why SFE so low? candidates are b-field & turbulent.
 
@@ -170,9 +310,9 @@ style: |
 
 - Probing the Magnetic field.
 
-    1. Zeeman measurement (LOS field strength)
+1. Zeeman measurement (LOS field strength)
 
-    2. Polarmetary (Orientations).
+2. Polarmetary (Orientations).
 
 - Defination of Cloud-field alignment.
 
@@ -212,8 +352,9 @@ Why Solar can't see the Li17 trends.
 
 - Density threshold.
 
-    (Go through this paper)
-    - Solar use the density threshold above the critical density $A_V = 8$, a range that cloud mass is linearly correlated with the star-formation rate.
+(Go through this paper)
+
+- Solar use the density threshold above the critical density $A_V = 8$, a range that cloud mass is linearly correlated with the star-formation rate.
 
     - Li 2017 analyzed using cloud mass above $A_V= 2$, not only focusing on the high density region.
 
@@ -223,13 +364,16 @@ Why Solar can't see the Li17 trends.
 Collisional Coefficient. (WG Appendix)
 Drag force term.
 
-WG-tests with realistic collisional coefficient (inconsistence result)
+WG-tests with realistic collisional coefficient (inconsistence result) 
+Too big friction (drag) force pointing outward. (not collapsing)
 
-Same result if repeating Balsara's result.
+Same result if repeating Balsara's result. (Teley) (1/2 order smaller)
 
 Ask's ZY opinion.
 
-Draine 1986.
+Draine 1986. (realistic value)
+
+Same problems in Tilley & Balsare see if real collision coef 
 
 
 A numerical scheme and benchmark tests for non-isothermal two-fluid
@@ -239,3 +383,15 @@ David A. Tilley
 
 
 New Astronomy 17 (2012) 368–376
+
+
+---
+
+Goal of the paper.
+
+reperform SW15 paper, Scale with the observed cloud.
+
+Observe the MCF slope and SFE from the simulated observation.
+
+Comparing this with the observation and judge the most propably ratio between para and perp
+
