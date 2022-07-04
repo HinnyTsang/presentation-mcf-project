@@ -1,0 +1,115 @@
+<svg id="edv2ApIbDfV1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50"
+    width="50" height="50" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <style>
+        <![CDATA[
+        #edv2ApIbDfV5_to {
+            animation: edv2ApIbDfV5_to__to 1000ms linear infinite
+        }
+
+        @keyframes edv2ApIbDfV5_to__to {
+            0% {
+                offset-distance: 0%
+            }
+
+            25% {
+                offset-distance: 25%
+            }
+
+            50% {
+                offset-distance: 50%
+            }
+
+            75% {
+                offset-distance: 75%
+            }
+
+            100% {
+                offset-distance: 100%
+            }
+        }
+
+        #edv2ApIbDfV8_to {
+            animation:
+                edv2ApIbDfV8_to__to 500ms linear infinite
+        }
+
+        @keyframes edv2ApIbDfV8_to__to {
+            0% {
+                offset-distance: 0%
+            }
+
+            25% {
+                offset-distance: 25%
+            }
+
+            50% {
+                offset-distance: 50%
+            }
+
+            75% {
+                offset-distance: 75%
+            }
+
+            100% {
+                offset-distance: 100%
+            }
+        }
+        ]]>
+    </style>
+    <defs>
+        <radialGradient id="edv2ApIbDfV3-fill" cx="0" cy="0" r="0.5" spreadMethod="pad"
+            gradientUnits="objectBoundingBox" gradientTransform="translate(0.5 0.5)">
+            <stop id="edv2ApIbDfV3-fill-0" offset="0%" stop-color="rgba(255, 0, 0, 1)" />
+			<stop id="edv2ApIbDfV3-fill-1" offset="80%" stop-color="rgba(255, 0, 0, 1)" />
+            <stop id="edv2ApIbDfV3-fill-2" offset="100%" stop-color="rgba(255, 0 ,0, 0)" />
+        </radialGradient>
+        <radialGradient id="edv2ApIbDfV4-fill" cx="0" cy="0" r="0.5" spreadMethod="pad"
+            gradientUnits="objectBoundingBox" gradientTransform="translate(0.5 0.5)">
+            <stop id="edv2ApIbDfV4-fill-0" offset="0%" stop-color="rgba(255, 255, 255, 1)" />
+            <stop id="edv2ApIbDfV4-fill-1" offset="80%" stop-color="rgba(255, 0, 0, 1)" />
+        </radialGradient>
+        <radialGradient id="edv2ApIbDfV6-fill" cx="0" cy="0" r="0.5" spreadMethod="pad"
+            gradientUnits="objectBoundingBox" gradientTransform="translate(0.5 0.5)">
+            <stop id="edv2ApIbDfV6-fill-0" offset="0%" stop-color="rgba(18,21,241,1)" />
+            <stop id="edv2ApIbDfV6-fill-1" offset="100%" stop-color="rgba(18,21,241,0)" />
+        </radialGradient>
+        <radialGradient id="edv2ApIbDfV7-fill" cx="0" cy="0" r="0.5" spreadMethod="pad"
+            gradientUnits="objectBoundingBox" gradientTransform="translate(0.5 0.5)">
+            <stop id="edv2ApIbDfV7-fill-0" offset="0%" stop-color="rgba(255, 255, 255, 1)" />
+            <stop id="edv2ApIbDfV7-fill-1" offset="50%" stop-color="rgba(0,0,255,1)" />
+            <stop id="edv2ApIbDfV7-fill-2" offset="100%" stop-color="rgba(0,0,255,0)" />
+        </radialGradient>
+        <radialGradient id="edv2ApIbDfV9-fill" cx="0" cy="0" r="0.5" spreadMethod="pad"
+            gradientUnits="objectBoundingBox" gradientTransform="translate(0.5 0.5)">
+            <stop id="edv2ApIbDfV9-fill-0" offset="0%" stop-color="rgba(255, 255, 255, 1)" />
+            <stop id="edv2ApIbDfV9-fill-1" offset="100%" stop-color="rgba(241,18,18,0)" />
+        </radialGradient>
+        <radialGradient id="edv2ApIbDfV10-fill" cx="0" cy="0" r="0.5" spreadMethod="pad"
+            gradientUnits="objectBoundingBox" gradientTransform="translate(0.5 0.5)">
+            <stop id="edv2ApIbDfV10-fill-0" offset="0%" stop-color="rgba(255, 255, 255, 1)" />
+            <stop id="edv2ApIbDfV10-fill-1" offset="50%" stop-color="rgba(255,255, 0,1)" />
+            <stop id="edv2ApIbDfV10-fill-2" offset="100%" stop-color="rgba(255,255 ,0,0)" />
+        </radialGradient>
+    </defs>
+    <g transform="matrix(.8 0 0 0.8 5 5)" opacity="1">
+        <ellipse rx="8" ry="8" transform="translate(25 25)" fill="url(#edv2ApIbDfV3-fill)" stroke-width="0" />
+        <ellipse rx="8" ry="8" transform="matrix(.769756 0 0 0.743729 25 25)" fill="url(#edv2ApIbDfV4-fill)"
+            stroke-width="0" />
+    </g>
+    <g id="edv2ApIbDfV5_to"
+        style="offset-path:path('M5,25C5,13.954305,13.954305,5,25,5C36.045695,5,45,13.954305,45,25C45,36.045695,36.045695,45,25,45C13.954305,45,5,36.045695,5,25');offset-rotate:auto">
+        <g transform="scale(0.4,0.4) translate(-25.000001,-24.999996)" opacity="0.7">
+            <ellipse rx="8" ry="8" transform="translate(25 25)" fill="url(#edv2ApIbDfV6-fill)" stroke-width="0" />
+            <ellipse rx="8" ry="8" transform="matrix(.769756 0 0 0.743729 25 25)" fill="url(#edv2ApIbDfV7-fill)"
+                stroke-width="0" />
+        </g>
+    </g>
+    <g id="edv2ApIbDfV8_to"
+        style="offset-path:path('M15.711052,25C15.711052,19.869856,19.869856,15.711052,25,15.711052C30.130144,15.711052,34.288948,19.869856,34.288948,25C34.288948,30.130144,30.130144,34.288948,25,34.288948C19.869856,34.288948,15.711052,30.130144,15.711052,25');offset-rotate:auto">
+        <g transform="scale(0.5,0.5) translate(-25.000001,-24.999996)" opacity="0.7">
+            <ellipse rx="8" ry="8" transform="translate(25 25)" fill="url(#edv2ApIbDfV9-fill)" stroke-width="0" />
+            <ellipse rx="8" ry="8" transform="matrix(.769756 0 0 0.743729 25.000002 25.000004)"
+                fill="url(#edv2ApIbDfV10-fill)" stroke-width="0" />
+        </g>
+    </g>
+</svg>
